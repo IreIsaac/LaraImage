@@ -1,0 +1,46 @@
+{
+    "name": "ireisaac/laraimage",
+    "type": "library",
+    "description": "Easily utilize the glide image package in laravel",
+    "keywords": [
+        "ireisaac",
+        "laravel-glide"
+    ],
+    "homepage": "https://github.com/ireisaac/laravel-glide",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Isaac Enderline",
+            "email": "contact@isaacenderline.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0",
+        "league/glide": "^1.0",
+        "league/glide-laravel": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "IreIsaac\\LaraImage\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IreIsaac\\LaraImage\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
