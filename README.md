@@ -7,7 +7,8 @@ I am a fan of the php leagues Glide Image package and use it in most of my proje
 Via Composer
 
 ``` bash
-$ composer require ireisaac/laraimage
+composer require ireisaac/laraimage
+php artisan vendor:publish
 ```
 Register service provider in config/app.php,  at the end of the long providers array I'd check around line 155-160
 ``` php
