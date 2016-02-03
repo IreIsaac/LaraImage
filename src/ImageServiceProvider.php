@@ -19,10 +19,22 @@ class ImageServiceProvider extends ServiceProvider
      */
     public function boot(Registrar $router)
     {
+        // Register the default route for images
         $router->get('img/{path}', function(Request $request, Server $glide) {
 
             return $glide->getImageResponse($request->getPathInfo(), $request->toArray());
-        })->where('path', '.+');
+        })->where('path', '.+'); // match all routes where path starts with img/
+
+        // configuration file
+        $this->publishes([
+            __DIR__.'/../config/images.php' => config_path('images.php')
+        ], 'config');
+
+        // default images
+        $this->publishes([
+            __DIR__.'/../storage/' => storage_path('app/images')
+        ], 'images');
+
     }
 
     /**

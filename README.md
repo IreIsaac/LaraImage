@@ -32,7 +32,7 @@ To render a default image when a requested image does not exists, place an image
 ``` php
     if($e instanceof \League\Glide\Filesystem\FileNotFoundException) {
 
-        return Image::outputImage('/img/default/ImageNotFound.png', $request->toArray());
+        return Image::outputImage(config('images.placeholder'), $request->toArray());
     }
 ```
 ## Usage
