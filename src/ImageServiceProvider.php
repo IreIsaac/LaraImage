@@ -22,7 +22,7 @@ class ImageServiceProvider extends ServiceProvider
         // Register the default route for images
         $router->get('img/{path}', function(Request $request, Server $glide) {
 
-            return $glide->getImageResponse($request->getPathInfo(), $request->toArray());
+            return $glide->getImageResponse($request->getPathInfo(), $request->all());
         })->where('path', '.+'); // match all routes where path starts with img/
 
         // configuration file
